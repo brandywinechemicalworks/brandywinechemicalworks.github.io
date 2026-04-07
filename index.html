@@ -1,358 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-
   <meta charset="UTF-8" />
   <title>Brandywine Chemical Works</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
 
   <style>
     :root {
       --navy: #0a1a33;
       --navy-light: #11284d;
-      --gold: #d4af37;
-      --gold-soft: rgba(212,175,55,0.15);
+      --gold: #f1c40f;
+      --gold-dark: #d4ac0d;
       --text-dark: #1a1a1a;
-      --text-light: #f5f5f5;
-      --muted: #6b6b6b;
-      --card-bg: #ffffff;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: system-ui, sans-serif;
-      background: #ffffff;
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
-
-    /* NAVBAR */
-    nav {
-      width: 100%;
-      background: #ffffff;
-      padding: 16px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-
-    .nav-logo {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--navy);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .nav-links a {
-      margin-left: 24px;
-      text-decoration: none;
-      color: var(--navy);
-      font-weight: 500;
-      position: relative;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    /* HERO */
-    .hero {
-      width: 100%;
-      height: 420px;
-      background: linear-gradient(
-        rgba(10,26,51,0.75),
-        rgba(10,26,51,0.75)
-      ),
-      url('plant.jpeg') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 40px;
-      color: var(--text-light);
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--gold);
-      max-width: 700px;
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin-top: 12px;
-      font-size: 1.1rem;
-      color: #e0e0e0;
-    }
-
-    .hero-buttons {
-      margin-top: 24px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 1rem;
-      margin-right: 12px;
-      font-weight: 600;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: #000;
-    }
-
-    .btn-outline {
-      border: 2px solid var(--gold);
-      color: var(--gold);
-    }
-
-    /* SECTION WRAPPERS */
-    section {
-      padding: 60px 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--gold);
-      margin-bottom: 24px;
-      font-weight: 700;
-    }
-
-    /* WHITE SECTIONS */
-    .white-section {
-      background: #ffffff;
-      color: var(--text-dark);
-    }
-
-    /* NAVY SECTIONS */
-    .navy-section {
-      background: var(--navy);
-      color: var(--text-light);
-    }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      transition: transform 0.15s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-    }
-
-    .card h3 {
-      color: var(--navy);
-      margin-bottom: 8px;
-      font-size: 1.2rem;
-    }
-
-    .card p {
-      color: var(--muted);
-    }
-
-    a.card-link {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #ffffff;
-      padding: 40px;
-      border-top: 1px solid #e0e0e0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 24px;
-      color: var(--navy);
-    }
-
-    footer h4 {
-      font-size: 1rem;
-      margin-bottom: 12px;
-      color: var(--gold);
-    }
-
-    footer p, footer a {
-      color: var(--navy);
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    footer a:hover {
-      color: var(--gold);
-    }
-
-    .footer-bottom {
-      grid-column: 1 / -1;
-      margin-top: 20px;
-      font-size: 0.85rem;
-      color: var(--muted);
-      text-align: center;
+      --light-gray: #f5f5f5;
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <div class="nav-logo">Brandywine Chemical Works</div>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#internships">Internships</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-container">
+      <h1 class="logo">Brandywine Chemical Works</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="#internships">Internships</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>Reliable Specialty Chemical Supply</h1>
-  <p>High‑value intermediates, engineered reliability, and toll‑enabled production pathways for advanced materials customers.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Reliable Specialty Chemical Supply</h1>
+      <p>High-value intermediates, engineered reliability, and toll-enabled production pathways for advanced materials customers.</p>
+      <div class="hero-buttons">
+        <a href="products.html" class="btn">Our Products</a>
+        <a href="#internships" class="btn">Internships</a>
+      </div>
+    </div>
+  </section>
 
-  <div class="hero-buttons">
-    <a href="#products" class="btn btn-primary">Our Products</a>
-    <a href="#internships" class="btn btn-outline">Internships</a>
-  </div>
-</div>
+  <!-- PRODUCTS PREVIEW -->
+  <section class="products-preview">
+    <h2>Our Products</h2>
+    <p>High-purity intermediates engineered for advanced materials, coatings, and specialty chemical applications.</p>
 
-<!-- ABOUT -->
-<section id="about" class="white-section">
-  <div class="section-title">Who We Are</div>
-  <p>
-    Brandywine Chemical Works focuses on niche, high‑value intermediates where consistency, documentation, and supply reliability matter. 
-    Our model blends sourcing, qualification, and toll‑enabled production to support advanced materials and industrial customers.
-  </p>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products" class="navy-section">
-  <div class="section-title">Our Product Portfolio</div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Brominated Aromatic Intermediate</h3>
-      <p>Used in flame retardants, advanced polymers, and specialty coatings.</p>
+    <div class="product-grid">
+      <div class="product-card">Acrylic Intermediates</div>
+      <div class="product-card">Polymer Additives</div>
+      <div class="product-card">Performance Solvents</div>
+      <div class="product-card">Custom Toll Blends</div>
     </div>
 
-    <div class="card">
-      <h3>Quaternary Ammonium Salt</h3>
-      <p>Serves water treatment, surfactant systems, and phase‑transfer catalysis.</p>
+    <a href="products.html" class="btn-secondary">View All Products</a>
+  </section>
+
+  <!-- INTERNSHIPS -->
+  <section id="internships" class="internships">
+    <h2>Internship Opportunities</h2>
+    <p>Hands-on roles designed for engineering, analytics, and business students.</p>
+
+    <div class="internship-grid">
+      <a href="chemical-engineering-intern.html" class="card">Chemical Engineering Intern</a>
+      <a href="data-analytics-intern.html" class="card">Data & Analytics Intern</a>
+      <a href="business-ops-intern.html" class="card">Business Operations Intern</a>
+      <a href="software-intern.html" class="card">Software Engineering Intern</a>
+      <a href="technical-writing-intern.html" class="card">Technical Writing Intern</a>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Alkylated Phenol Derivative</h3>
-      <p>Used in lubricant additives, antioxidants, and polymer stabilization.</p>
-    </div>
-
-    <div class="card">
-      <h3>Specialty High‑Purity Diol</h3>
-      <p>Supports polyurethane systems, elastomers, and high‑performance coatings.</p>
-    </div>
-
-    <div class="card">
-      <h3>Custom Toll‑Produced Intermediate</h3>
-      <p>Flexible production for customer‑specific molecules requiring controlled scale‑up.</p>
-    </div>
-  </div>
-</section>
-
-<!-- INTERNSHIPS -->
-<section id="internships" class="white-section">
-  <div class="section-title">Internships</div>
-
-  <div class="grid">
-    <a class="card-link" href="software-intern.html" target="_blank">
-      <div class="card">
-        <h3>Software Engineering Intern</h3>
-        <p>Build internal tools, automation systems, and digital infrastructure.</p>
-      </div>
-    </a>
-
-    <a class="card-link" href="business-ops-intern.html" target="_blank">
-      <div class="card">
-        <h3>Business Operations Research Intern</h3>
-        <p>Support supplier research, toll‑manufacturing analysis, and market mapping.</p>
-      </div>
-    </a>
-
-    <a class="card-link" href="chemical-engineering-intern.html" target="_blank">
-      <div class="card">
-        <h3>Chemical Engineering Intern</h3>
-        <p>Assist with process analysis, documentation, and intermediate evaluation.</p>
-      </div>
-    </a>
-
-    <a class="card-link" href="data-analytics-intern.html" target="_blank">
-      <div class="card">
-        <h3>Data & Analytics Intern</h3>
-        <p>Develop dashboards, supply‑chain models, and analytics tools.</p>
-      </div>
-    </a>
-
-    <a class="card-link" href="technical-writing-intern.html" target="_blank">
-      <div class="card">
-        <h3>Technical Writing Intern</h3>
-        <p>Create COA templates, SOP drafts, and technical summaries.</p>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="navy-section">
-  <div class="section-title">Contact</div>
-  <p><strong>Email:</strong> brandywinechemicalworks@gmail.com</p>
-  <p><strong>Location:</strong> Wilmington, Delaware (Hybrid / Remote‑friendly)</p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div>
-    <h4>Company</h4>
-    <p>About</p>
-    <p>Products</p>
-    <p>Careers</p>
-  </div>
-
-  <div>
-    <h4>Contact</h4>
-    <p>brandywinechemicalworks@gmail.com</p>
-    <p>Wilmington, DE</p>
-  </div>
-
-  <div class="footer-bottom">
-    © <span id="year"></span> Brandywine Chemical Works LLC — Specialty Intermediates · Toll‑Enabled Supply
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Brandywine Chemical Works — Wilmington, DE</p>
+  </footer>
 
 </body>
 </html>
+
