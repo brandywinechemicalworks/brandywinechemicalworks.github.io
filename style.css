@@ -137,6 +137,53 @@ nav {
   border-radius: 8px;
   border: 1px solid #ddd;
   font-weight: 600;
+  text-align: center;
+}
+
+.clickable-card {
+  text-decoration: none;
+  color: var(--navy);
+  transition: 0.2s ease;
+}
+
+.clickable-card:hover {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold-dark);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+/* CATEGORY PAGES */
+.category-header {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.chemical-grid {
+  padding: 40px 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.chemical-card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.capabilities {
+  padding: 40px 10%;
+  background: var(--light-gray);
+  text-align: center;
+}
+
+.capabilities p {
+  max-width: 700px;
+  margin: auto;
 }
 
 /* INTERNSHIPS */
